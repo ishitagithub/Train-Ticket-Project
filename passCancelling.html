@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pass</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fbfbfc;
+    }
+    center {
+        margin-right: 200px;
+        margin-top: 240px;
+        margin-left: 240px;
+        background-color: #d5faa6;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 60%;
+        z-index: 1;
+        position: relative; /* Ensure proper stacking context */
+    }
+    @keyframes moveRocket {
+        0% {
+            top: 20%;
+            left: calc(50% - 50px); /* Adjust this value according to your rocket size */
+        }
+        25% {
+            top: calc(50% - 50px); /* Adjust this value according to your rocket size */
+            left: calc(100% - 100px); /* Adjust this value according to your rocket size */
+        }
+        50% {
+            top: calc(100% - 100px); /* Adjust this value according to your rocket size */
+            left: calc(50% - 50px); /* Adjust this value according to your rocket size */
+        }
+        75% {
+            top: calc(50% - 50px); /* Adjust this value according to your rocket size */
+            left: -100px;
+        }
+        100% {
+            top: 20%;
+            left: calc(50% - 50px); /* Adjust this value according to your rocket size */
+        }
+    }
+    .rocket {
+        position: absolute;
+        width: 100px; /* Adjust the width of the rocket */
+        height: auto; /* Keep the aspect ratio */
+        top: 20%;
+        left: calc(50% - 25px); /* Adjust this value according to your rocket size */
+        transform: translateY(-50%);
+        animation: moveRocket 5s linear infinite; /* Adjust the duration of the animation */
+        z-index: -1; /* Set z-index lower than center box */
+    }
+</style>
+<body>
+    <center>
+        Your ticket has been successfully cancelled.<br>
+        First Name: <?php echo $_POST['fname']; ?><br>
+        Last Name: <?php echo $_POST['lname']; ?><br>
+        Train Name: <?php echo $_POST['tname']; ?><br>
+        Train Number: <?php echo $_POST['tno']; ?><br>
+        Email: <?php echo $_POST['email']; ?><br>
+        Telephone: <?php echo $_POST['tel']; ?><br>
+        Date: <?php echo $_POST['date']; ?>
+    </center>
+    <img src="rocket.png" alt="Rocket" class="rocket">
+</body>
+</html>
