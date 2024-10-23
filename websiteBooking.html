@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+
+  <title>Tatkal Booking</title>
+  <style>
+    /* CSS styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Roboto, sans-serif;
+      color: #515a6e;
+      background-image: url("https://www.travelandleisure.com/thmb/EX0ouVFx5cEtirf3X9QPER8nTEk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/white-pass-yukon-route-6-TRAINTRIP0718-220e2c874df54fc88dd300d481b7632c.jpg");
+      height: 100%;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      cursor: pointer;
+      color: #000;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    a:hover {
+      color: rgb(85, 22, 243);
+    }
+
+    /* Navigation Bar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(217, 238, 189,0.8);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #540ad4;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a.active {
+      color: #540ad4;
+      font-weight: bold;
+    }
+    /* Improved Date Input */
+
+    .input.date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+
+    .input.date label {
+      flex: 1;
+      color: #8597a3;
+    }
+
+    .input.date .input_field {
+      flex: 2;
+      width: 100%;
+    }
+
+    /* Rest of your styles */
+
+    .container {
+      position: relative;
+      background-color: #fafafe;
+      border-radius: 10px;
+      margin: 40px;
+      padding: 25px 20px 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      box-sizing: border-box;
+    }
+
+    .container:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 60%;
+      background-color: #fafafe;
+      border-radius: 10px;
+      z-index: 2;
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card_title {
+      font-size: 24px;
+      margin: 0;
+    }
+
+.card_title-info {
+  font-size: 14px;
+  margin: 7px 0 10px;
+}
+
+.card_button {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 500;
+  margin: 25px 0 10px;
+  color: #fff;
+  background: linear-gradient(#540ad4, rgb(51, 203, 223));
+  box-shadow: 0 2px 12px -3px rgb(58, 159, 226);
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+
+.card_button:hover {
+  opacity: 1;
+  box-shadow: 0 2px 2px -3px rgb(141, 238, 225);
+}
+
+.card_info {
+  font-size: 14px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.input_label {
+  color: #8597a3;
+  position: absolute;
+  top: 20px;
+  transition: all 0.3s;
+}
+
+.input_field {
+  border: 0;
+  padding: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.input_field:focus,
+.input_field:valid {
+  outline: 0;
+  border-bottom-color: #4340e9;
+}
+
+.input_field:focus+.input_label,
+.input_field:valid+.input_label {
+  color: #2111d3;
+  transform: translateY(-25px);
+}
+
+.input_eye {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input_eye svg {
+  width: 24px;
+  stroke: #3115d2;
+}
+
+.link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+}
+
+.rabbit {
+  width: 50px;
+  height: 50px;
+  fill: #fff;
+}
+li{
+  margin-right:40px;
+}
+</style>
+</head>
+
+<body>
+<header>
+<a href="#" class="logo">Tatkal Booking</a>
+<nav class="nav-links">
+  <li><a href="websiteCancelling.html">Cancelling Ticket</a></li>
+</nav>
+</header>
+<div class="container">
+<div class="card">
+  <h2 class="card_title">Booking train at the last moment?</h2>
+  <form name="passdata" class="form" name="sos" id="sos" action="connectBooking.php" method="post">
+    <div class="input">
+      <input type="text" class="input_field" id="fname" name="fname" required />
+      <label class="input_label" for="fname">First name</label>
+    </div>
+      <div class="input">
+        <input type="text" class="input_field" id="lname" name="lname" required />
+        <label class="input_label" for="lname">Last name</label>
+      </div>
+      <div class="input">
+        <input type="text" class="input_field" id="tname" name="tname" required />
+        <label class="input_label" for="tname">Train name</label>
+      </div>
+      <div class="input">
+        <input type="text" class="input_field" id="tno" name="tno" required />
+        <label class="input_label" for="tno">Train number</label>
+      </div>
+      <div class="input">
+        <input type="text" class="input_field" id="email" name="email" required />
+        <label class="input_label" for="email">Email address</label>
+      </div>
+      <div class="input">
+        <input type="tel" class="input_field" id="tel" name="tel" required />
+        <label class="input_label" for="tel">Phone number</label>
+      </div>
+      <br>
+      Date of the train:-
+      <div class="input date">
+        
+        <input type="date" class="input_field" id="date" name="date" required />
+      </div>
+      <hr />
+      <input type="submit" class="card_button" value="Submit" />
+    </form>
+  </div>
+</div>
+</body>
+
+</html>
